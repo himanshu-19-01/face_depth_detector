@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Depth Detector</title>
+    <style>
+        .frame {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+          }
+          
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+          
+          @media (max-width: 768px) {
+            /* Center the div horizontally on small screens */
+            .frame {
+              justify-content: center;
+              align-items: flex-start;
+            }
+          }
+          
+          @media (min-width: 769px) {
+            /* Center the div both horizontally and vertically on larger screens */
+          .frame {
+              justify-content: center;
+              align-items: center;
+            }
+          }          
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Depth Detector</h1>
+    <div class="frame">
+    <img id="video_feed" src="{{ url_for('video_feed') }}">
+    </div>
+  </body>
+</html>
